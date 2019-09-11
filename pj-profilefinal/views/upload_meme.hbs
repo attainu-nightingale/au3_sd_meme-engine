@@ -23,10 +23,15 @@
 </form>
 
       <div id="up-show">
-             <input type="file" id="image-input"accept="image/x-png,image/gif,image/jpeg"name="file_uploaded"> 
-            {{!-- <form action="upload" method="POST" enctype="multipart/form-data"></form> --}}
-            <button class="btn btn-lg btn-success"  id ="generate-btn">Show</button>
+             {{!-- <input type="file" id="image-input"accept="image/x-png,image/gif,image/jpeg"name="file_uploaded"> 
+            <form action="upload" id="image-input" method="POST" enctype="multipart/form-data">
+            <button class="btn btn-lg btn-success"  id ="generate-btn">Show</button> --}}
+            <form action="upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file_uploaded">
+            <button class="submit" type="submit">Upload</button>
+            </form>
         </div>
+        </form>
         
         <div class="vl"> </div>
             <canvas id="meme-canvas">

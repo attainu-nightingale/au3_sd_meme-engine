@@ -9,18 +9,18 @@ var mongoClient=require("mongodb").MongoClient;
 
 var dotenv=require('dotenv'); //npm i dotenv --s
 dotenv.config();
+var url="mongodb+srv://zuha:zuha123@meme-engine-db-lqz5b.mongodb.net/myDBS?retryWrites=true&w=majority";
 
-
-//console.log("Connected with",CLOUD_NAME); //npm i cloudinary --s
+ //npm i cloudinary --s
 
 cloudinary.config({
-    cloud_name: process.env.CLOUD_NAME,
-    api_key:process.env.API_KEY,
-    api_secret:process.env.API_KEY
+    cloud_name: "dyjgcjdks",
+    api_key:"428482624546888",
+    api_secret:"5ez9IORGY0bF83E1qS6GSO6SmzM"
 });
 
 var db;
-mongoClient.connect("mongodb://localhost:27017",function(err,client){
+mongoClient.connect(url,function(err,client){
 if (err) throw err;
 db=client.db("myDBS");
 });
@@ -123,9 +123,9 @@ app.get("/edit",function(req,res){
               res.redirect("back");
             });
         
-app.get("/dmyprofile",function(req,res){
-    res.render(307,"/myprofile");
-});
+// app.get("/dmyprofile",function(req,res){
+//     res.render(307,"/myprofile");
+// });
 
 app.post("/verify",function(req,res){
     db.collection("users").find().toArray(function(err,result){
@@ -171,21 +171,21 @@ app.get("/logout",function(req,res){
 app.get("/upload_meme",function(req,res){
     res.render("upload_meme");
 });
-app.get("/dusrapage",function(req,res){
-    res.render("dusrapage",{files:files});
+app.get("/upload_meme",function(req,res){
+    res.render("upload_meme",{files:files});
 });
 
 
 var files=[];
 app.post("/upload",upload.single('file_uploaded'),function(req,res,next){
-    console.log("file:",req.file);
-    // cloudinary.uploader.upload(req.file.path,function(error,result){
-        // console.log("Result of cloudinary:",result);
-    //     files.push(result.secure_url);
-    //    res.render("myprofile",{files:files});
-    // });
-     files.push(req.file.path.substr(6));
-     res.render("dusrapage",{files:files});
+    //db.collection("users").insert(req.body);
+   console.log("file:",req.file);
+     cloudinary.uploader.upload(req.file.path,function(error,result){
+        console.log("Result of cloudinary:",result);
+       files.push(result.secure_url);
+      res.render("myprofile",{files:files});
+     });
+     
 });
 
 

@@ -4,14 +4,6 @@
 <head>
   
         <link   rel="stylesheet"  href="myprofile.css">
-		{{!-- <script>
-$(document).ready(function(){
-    $("#signout").click(function(){
-          window.location.href="/logout";   
-        });
-    });
-});
-</script> --}}
 
 
 
@@ -19,76 +11,71 @@ $(document).ready(function(){
 </head>
 
 <body>
-   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!-- For demo purpose -->
+<div class="row">
+    <div class="col-lg-7 mx-auto text-white text-center pt-5">
+        <h1 class="display-4">My PROFILE PAGE</h1>
+    </div>
+</div><!-- End -->
 
-<div class="container">
-    <div class="row profile">
-		<div class="col-md-3">
-			<div class="profile-sidebar">
-				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					<img src="" class="img-responsive" alt="">
-				</div>
-				<!-- END SIDEBAR USERPIC -->
-				<!-- SIDEBAR USER TITLE -->
-				<div class="profile-usertitle">
-					<div class="profile-usertitle-name">
-						Welcome {{data.username}}
-					</div>
-				</div>
-				<!-- END SIDEBAR USER TITLE -->
-				<!-- SIDEBAR BUTTONS -->
-				<div class="profile-userbuttons">
-					
-					<button type="submit" class="btn btn-success btn-sm glyphicon glyphicon-open submit"><a href="/upload_meme">Upload Meme</a></button>
-					
-					</form>
-				</div>
-				<!-- END SIDEBAR BUTTONS -->
-				<!-- SIDEBAR MENU -->
-				<div class="profile-usermenu">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">
-							<i class="glyphicon glyphicon-home"></i>
-							My Account </a>
-						</li>
-						<li>
-							<a href="/edit">
-							<i class="glyphicon glyphicon-user"></i>
-							Account Settings </a>
-						</li>
-						
-					                        <li>
-							<a href="/logout">
-							<i class="glyphicon glyphicon-log-out"></i>
-							Sign Out </a>
-						</li>
-					</ul>
-				</div>
-				<!-- END MENU -->
-			</div>
-		</div>
-		<div class="col-md-9">
-            <div class="profile-content">
-			 <center> <h2> Total Memes Uploaded Till Date....</h2></center>
-				<h1>Gallery</h1>
-				{{#each files}}
-				<img src="{{this}}" alt="Image" height="200">
-				{{/each}}
 
+<div class="row py-5 px-4">
+    <div class="col-xl-4 col-md-6 col-sm-10 mx-auto">
+
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 bg-dark">
+                <div class="media align-items-end profile-header">
+                    <div class="profile mr-3"><a href="/edit" class="btn btn-dark btn-sm btn-block">Edit profile</a></div>
+					<button type="submit" class="btn btn-dark btn-sm glyphicon glyphicon-open "><a href="/upload_meme">Create Here</a></button>
+                    <div class="media-body mb-5 text-white">
+                        <h4 class="mt-0 mb-5" style="text-align:left;">Welcome
+							{{data.username}}</h4>
+                        <br>
+                    </div>
+                </div>
             </div>
-		</div>
-	</div>
+			<br>
+            <div class="py-4 px-4">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="mb-0">Recent Memes Uploaded</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                </div>
+                <div class="row d-flex" style="overflow:auto;">
+                    {{!-- <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/nicole-honeywill-546848-unsplash_ymprvp.jpg" alt="" class="img-fluid rounded shadow-sm"></div>
+                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556294927/dose-juice-1184444-unsplash_bmbutn.jpg" alt="" class="img-fluid rounded shadow-sm"></div>
+                    <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556294926/cody-davis-253925-unsplash_hsetv7.jpg" alt="" class="img-fluid rounded shadow-sm"></div>
+                    <div class="col-lg-6 pl-lg-1"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556294928/tim-foster-734470-unsplash_xqde00.jpg" alt="" class="img-fluid rounded shadow-sm"></div> --}}
+					{{#each files}}
+					<div class="col-lg-6 mb-2 pr-lg-1"><img src="{{this}}" alt="" class="img-fluid rounded shadow-sm"></div>
+					{{/each}}
+
+                </div>
+                <div class="py-4">
+                   <a href="/logout" class="btn btn-dark btn-sm btn-block">Logout</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<br>
-<br>
 
 </body>
   
 
 </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
