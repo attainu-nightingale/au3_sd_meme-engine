@@ -29,7 +29,7 @@ if(process.env.DB_URL)
     console.log(url)}
 else
    {url="mongodb://127.0.0.1:27017";}
-mongoClient.connect(url,{ useUnifiedTopology: true },function(error,client){
+mongoClient.connect(url,{ useUnifiedTopology: true } ,function(error,client){
          if (error)
             throw error;
         db=client.db("blog");
@@ -79,13 +79,31 @@ app.post("/Upload",upload.single("memes"), function(req, res){
 
 
            })
-
+//  app.get("/amit/:a", function(req, res){
+//             console.log(req.param(a));
+// res.render("home.hbs" , {
+//               style: "/style.css",
+//                script:"/data.js"
+//             });
+        
+//         });
 
 
     
 
 });
+app.get('/post/:post_id', function (req, res) {
+    res.send(parseInt(req.params.post_id)+"and"+parseInt(req.params.post_id)+"");
+  //  console.log(req.params());
 
+})
+app.get("/student",function(req,res){
+    db.collection('student').findOne(
+            {_id : require('mongodb').ObjectID(req.query.id)},function(err,result){
+            if(err)
+             throw err;
+            res.json((result)); })
+}); 
 
 app.listen(process.env.PORT || 3000, function () {
     console.log("Your App is running at port 3000");

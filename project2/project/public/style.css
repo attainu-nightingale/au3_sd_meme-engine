@@ -53,6 +53,7 @@ body {
 .vl {
     border-left: 3px solid red;
     height: auto; 
+    padding-left: 0%;
 }
 
 .col-6 {

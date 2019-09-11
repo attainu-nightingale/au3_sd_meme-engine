@@ -67,76 +67,31 @@
       
     </section> <br>
 
-    <section id="main-body">
+    <section id="main-body" style="margin-left: 10px;margin-right: 10px;width:100%;"> 
+         <div class="container-fluid" style="margin-left: 10px;margin-right: 10px;width:100%;">
 
-        <div class="row" style="margin: 10px">
+        <div class="row" >
             <div class="col-2">
 
-                <h2> Categories </h2>
+                <h2 style="font-size:2vw;"> Categories </h2>
                 <br>
 
                     <ul style="list-style-type:none;">
-                            <li style="margin: 15px" id="Fun"> <button class="btn btn-danger"> #Funny </button>  </li>
-                            <li style="margin: 15px" id="Hum">  <button class="btn btn-danger"> #Humor  </button> </li>
-                            <li style="margin: 15px" id="Sar">  <button class="btn btn-danger"> #Sarcasm </button> </li>
-                            <li style="margin: 15px" id="Awe">  <button class="btn btn-danger">  #Awesome  </button> </li>
-                            <li style="margin: 15px" id="Sch">  <button class="btn btn-danger">  #School  </button> </li>
-                            <li style="margin: 15px" id="userUpload">  <button class="btn btn-danger">  #UserUploads  </button> </li>
+                            <li style="margin: 15px" id="Fun"> <button class="btn btn-danger" style="font-size:1.1vw;"> #Funny </button>  </li>
+                            <li style="margin: 15px" id="Hum">  <button class="btn btn-danger" style="font-size:1.1vw;"> #Humor  </button> </li>
+                            <li style="margin: 15px" id="Sar">  <button class="btn btn-danger" style="font-size:1.1vw;"> #Sarcasm </button> </li>
+                            <li style="margin: 15px" id="Awe">  <button class="btn btn-danger"style="font-size:1.1vw;">  #Awesome  </button> </li>
+                            <li style="margin: 15px" id="Sch">  <button class="btn btn-danger" style="font-size:1.1vw;">  #School  </button> </li>
+                            <li style="margin: 15px" id="userUpload">  <button class="btn btn-danger" style="font-size:1.1vw;">  #UserUploads  </button> </li>
                           </ul>  
                 
 
             </div>
 
-            <div class="vl" ></div>
+            {{!-- <div class="vl" ></div> --}}
 
-            <div class="col-9">
-                <div class='container'>
-                  <div class=" row d-flex p-2" style="width:100%;height:2%;"><marquee scrollamount="12" loop="infinite" behavior="scroll" width="100%" direction="left" height="100%" style="display:inline;">
-                <table><tbody><tr>
-                 <td>  <div class="card" style="width: 100px;">
-                    <a href="http://localhost:3000/"><img class="card-img-top" src="https://pics.me.me/thumb_so-funny-i-forgot-to-laugh-1410132.png" alt="Card image cap">
-                    <div class="card-body" style="text-align:left;">
-                      Funny
-                    
-                     </div></a>
-                    </div>
-                    </td>
-                    <td><pre>                              </pre></td>
-                     <td><a href="http://localhost:3000/"> <div class="card" style="width: 100px;">
-                    <img class="card-img-top" src="http://quotesnhumor.com/wp-content/uploads/2015/07/Top-25-Funny-Memes-Funnies.jpg" alt="Card image cap">
-                    <div class="card-body" style="text-align:left;">
-                       Humor
-                    
-                     </div>
-                    </div></a></td>
-                    <td><pre>                              </pre></td>
-                     <td><a href="http://localhost:3000/"> <div class="card" style="width: 100px;">
-                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/double-thumbs-up-awesome-meme.png" alt="Card image cap">
-                    <div class="card-body" style="text-align:left;">
-                       Awesome
-                    
-                     </div>
-                    </div></a></td>
-                     <td><pre>                              </pre></td>
-                     <td><a href="http://localhost:3000/"> <div class="card" style="width: 100px;">
-                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/look-and-guess-what-sarcastic-memes.png" alt="Card image cap">
-                    <div class="card-body" style="text-align:left;">
-                       Sarcasm
-                    
-                     </div>
-                    </div></a></td>
-                    <td><pre>                              </pre></td>
-                     <td><a href="http://localhost:3000/"> <div class="card" style="width: 100px;">
-                    <img class="card-img-top" src="https://cdn.ebaumsworld.com/mediaFiles/picture/2165492/84809085.jpg" alt="Card image cap">
-                    <div class="card-body" style="text-align:left;">
-                       School
-                    
-                     </div>
-                    </div></a></td>
-                
-                     </tr>
-                    </tbody></table>
-</marquee></div>
+            <div class="col-9 vl" style="padding:0%;">
+               
 
                     <div id="crd" class="row card-columns" style="left-margin: 10px">
                         {{!-- <div class="col-4"> --}}
@@ -144,33 +99,87 @@
  --}}
                         
                         </div>
+                      
                
                     </div>
+            
+                <div class="col-1 " style="Height:708px;position:fixed;left:92%;top:10%;" >
+                 <marquee scrollamount="10" loop="infinite" behavior="scroll" width="100%" direction="down" height="100%">
+                <table><tbody><tr>
+                 <td id="Funny" style="padding: 30px 0px;">  <div class="card" style="width: 100px;border:#28a745 solid 2px;">
+                    <img class="card-img-top" src="https://pics.me.me/thumb_so-funny-i-forgot-to-laugh-1410132.png" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;"  >
+                      Funny
+                    
+                     </div>
+
+
                     </div>
+                    </td>
+                    <tr > <td id="Humor" style="padding: 30px 0px;"> <div class="card" style="width: 100px;border:#28a745 solid 2px;">
+                    <img class="card-img-top" src="http://quotesnhumor.com/wp-content/uploads/2015/07/Top-25-Funny-Memes-Funnies.jpg" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;">
+                       Humor
+                    
+                     </div>
+                    </div></td>
+                    </tr><tr>
+                     <td id="Awesome" style="padding: 30px 0px;"> <div class="card" style="width: 100px;border:#28a745 solid 2px;">
+                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/double-thumbs-up-awesome-meme.png" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;">
+                       Awesome
+                    
+                     </div>
+                    </div></td>
+                     </tr><tr>
+                     <td id="Sarcasm" style="padding: 30px 0px;"><div class="card" style="width: 100px;border:#28a745 solid 2px;">
+                    <img class="card-img-top" src="https://sayingimages.com/wp-content/uploads/look-and-guess-what-sarcastic-memes.png" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;">
+                       Sarcasm
+                    
+                     </div>
+                    </div></td>
+                    </tr><tr>
+                     <td id="School" style="padding: 30px 0px; "> <div class="card" style="width: 100px;border:#28a745 solid 2px;">
+                    <img class="card-img-top" src="https://cdn.ebaumsworld.com/mediaFiles/picture/2165492/84809085.jpg" alt="Card image cap">
+                    <div class="card-body" style="text-align:left;">
+                       School
+                    
+                     </div>
+                    </div></td>
+                
+                     </tr>
+                    </tbody></table></marquee>
+</div>
 
 
+              
 
 
-            </div>
+          
                  
             </div>
-{{!-- 
-            <div class="vl"></div>
 
-            <div class="col" id="right">
+            
 
-                <h3> Share On </h3> <br>
+            {{!-- <div class="vl"></div>
+
+            <div class="col" id="right"> --}}
+
+                {{!-- <h3> Share On </h3> <br>
 
                 <button class="btn btn-primary"> <i class="fa fa-facebook-square" aria-hidden="true" style="margin: 10px ;"></i> </button>
                 <button class="btn btn-primary"> <i class="fa fa-google" aria-hidden="true" style="margin: 10px ;"></i>  </button> 
                 <button class="btn btn-primary">  <i class="fa fa-instagram" aria-hidden="true" style="margin: 10px ;"></i> </button>
                 <button class="btn btn-primary">  <i class="fa fa-twitter" aria-hidden="true" style="margin: 10px ;"></i> </button>
+ --}}
+                  {{!-- // <div class='container'> --}}
+                   {{!-- <h2 class="row" style="font-size:2vw;" > Here We Go </h2> --}}
+                  
+{{!-- </marquee></div> --}}
 
-
-
+          
             </div>
-        </div> --}}
-
 
     </section>
    
@@ -186,9 +195,10 @@
       </div>
       <div class="modal-body">
          <form  action = "/Upload" method = "post"  enctype = "multipart/form-data" >
+         <input type="text" name="top"  placeholder="top text" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;"></br></br>
          <input  id = "input"   class="btn btn-outline-success my-2 my-sm-0"  type = "file"   name = "memes">
-          <button  id = "button" class="btn btn-outline-success my-2 my-sm-0"  type = "submit"  >Upload</button>
-
+          <button  id = "button" class="btn btn-outline-success my-2 my-sm-0"  type = "submit"  >Upload</button></br></br>
+         <input type="text" name="bottom" class=" btn-outline-success  my-sm-0" style="width:70%;border-radius: 10px; border:#28a745 solid 1px;" placeholder="bottom text">
         </form>
       </div>
       <div class="modal-footer">
@@ -212,10 +222,11 @@
         </button>
       </div>
       <div class="modal-body">
-           <button type="button" class="btn btn-outline-success my-2 my-sm-0" style="margin: 10px; color: #fff;" data-toggle="modal" data-target="#exampleModalCenter2">
+           <button type="button" class="btn btn-outline-success my-2 my-sm-0" style="margin: 10px; color: #fff; width:100%; background-color:#28a745;" data-toggle="modal" data-target="#exampleModalCenter2">
+            
                           Signup
                          </button>
-           <label>Login</label>
+           <label>LOGIN HERE:</label>
            <form>
            <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
@@ -293,7 +304,35 @@
 </div>
 
 
+ <!-- Modal -->
+<div class="modal fade" id="share" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Great!Take a copy </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <img src="" id="galleryImage" class="img-responsive" style="width:100%" />
+          <div id="galleryText"></div>
+            
+          <button  id = "button" class="btn btn-outline-success my-2 my-sm-0"  type = "submit"  >copy</button>
 
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>$('#share').on('show.bs.modal', function (e) {
+        $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+         $('#galleryText').text($(e.relatedTarget).data("src")); 
+});</script>
 </body>
 
 </html>
