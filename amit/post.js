@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoClient = require('mongodb').MongoClient;
 
 var db;
-var url = 'mongodb://127.0.0.1:27017';
+var url = 'mongodb+srv://amit:amit123@meme-engine-oubqo.mongodb.net/meme?retryWrites=true&w=majority';
 mongoClient.connect(url, function (err, client) {
   if (err)
     throw err;
@@ -18,10 +18,12 @@ mongoClient.connect(url, function (err, client) {
 // This is specific page route
 router.get('/post', function (req, res) {
   // res.json('This is posted image route');
-  db.collection('num').find({}).toArray(function(err,result){
+  db.collection('images').find({}).toArray(function(err,result){
     if(err)
       throw err;
     res.render("post",{
+      title:"post",
+      image:"https://www.todaysparent.com/wp-content/uploads/2017/06/when-your-kid-becomes-a-meme-1024x576-1497986561.jpg",
       style:"post.css",
       script:"script_post.js",
       array:result
@@ -59,9 +61,28 @@ router.put('/post', function (req, res) {
     if(err)
       throw err;
     res.json(result);
+    router.get('/post', function (req, res) {
+      // res.json('This is posted image route');
+      db.collection('num').find({}).toArray(function(err,result){
+        if(err)
+          throw err;
+        res.render("post",{
+          title:"post",
+          style:"post.css",
+          script:"script_post.js",
+          array:result
+        })
+        // res.json(result);
+      })
+        
+    });
   })
     
 });
+
+
+
+
 
 
 module.exports = router

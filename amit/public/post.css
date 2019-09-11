@@ -144,3 +144,12 @@ button {
   border-radius: 25px;
   border: 2px solid #f44336;
 }
+
+#sign {
+  border:2px red solid; 
+  border-radius:25px;
+  color:white;
+  background-image:  linear-gradient(to right, red, #5f1782);
+
+  	
+}

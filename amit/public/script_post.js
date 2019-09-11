@@ -1,4 +1,6 @@
 var flag=0
+if($('#logout').text()=='Logout'){
+
 $("#upvote").on('click',function(){
     $(this).toggleClass('clicked');
   if(flag==0){  
@@ -39,8 +41,7 @@ else if(flag==1) {
 
 
 })
-
-
+// this for comment
 $("#comment").on('click',function(){
     $.ajax({
         url:"/post",
@@ -52,10 +53,32 @@ $("#comment").on('click',function(){
         },
         success:function(data){
             alert("comment");
+            $('#sign').append("Username:"+$('#username').val()+ " "+" Comment:"+$('#newcomment').val()+"<br><br>");
             $('#username').val('');
             $('#newcomment').val('');
         }
     })
 
 })
+
+}
+else{
+    if($('#logout').text()=='Login'){ 
+        
+    $("#upvote").on('click',function(){
+  
+    alert("not login")
+
+    
+    })
+}
+    // this for comment
+    $("#comment").on('click',function(){
+        $('#username').val('');
+        $('#newcomment').val('');
+        alert("You are not login")
+    
+    })
+}
+
 
