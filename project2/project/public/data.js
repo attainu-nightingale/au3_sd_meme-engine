@@ -5,7 +5,7 @@ $(document).ready(function(){
            type:'GET',
            success:function(data){
               // console.log(data);
-             // window.location.hash = 'Home';
+              window.location.hash = '';
               data=JSON.parse(data);
              //  $('#crd').append("<div class='card-deck' id='dec' style='width:100%;'></div>")
                  
@@ -26,3 +26,7 @@ $(document).ready(function(){
      
          
         })
+
+
+
+
