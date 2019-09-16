@@ -1,0 +1,69 @@
+ <section id="navbar" >
+    <nav class="navbar navbar-expand-lg navbar-light" style="height:140px;margin:0%;">
+
+
+        <a class="navbar-brand" href="/"><img src="../images/df807120-7bab-4b25-8bf3-588962468cb0_200x200.png"
+                id="logo" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color:white;">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us" style="color:white;">ABOUT-US</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-us" style="color:white;">CONTACT-US</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                    style="margin: 10px; color: #fff;">Upload Image</button>
+                <button id="logout" class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                    style="margin: 10px; color: #fff;"><a href="/post/logout">Logout</a></button>
+            </form>
+        </div>
+    </nav>
+
+</section> 
+    <div>
+      <h1 style="text-align: center;color:white; background-image: linear-gradient(to right, red, #5f1782); ">This is funny image</h1>
+    <div  class="imgPost" style="text-align: center;margin-left:35%;width:100%;" id="crd"></div>
+
+    <br>
+    </div>
+    
+
+    <form class="form-inline" >
+    <div class="imgbutton container " >
+         <button  id="previous" type="button">Last</button>
+        <button  id="upvote" type="button">Upvote</button>
+         <button  id="next" type="button"><span>Next </span></button>
+        <br>
+         <br>
+        {{#each arr}}
+         <div class="container" style="border:2px red solid;border-radius:25px;color:white;">Username:{{this.username}} <pre></pre>Comment:{{this.comment}}</div>
+               <br>
+        {{/each}}
+       
+
+        <div id="sign" style="color:white;"></div>
+        <p></p>
+        <br>
+        <p>Mongo db details</p>
+         
+        <input type="text" class="form-control" id="username" name="username" placeholder="enter username" />
+        
+        <input type="text" class="form-control" id="newcomment" name="comment" placeholder="Type your comment"/>
+        <button  id="cmmnt" type="button" >Comment</button><br><br>
+        
+    </div>
+    </form>
+    <br>
+    <h1 style="text-align: center;background-color:red;color:white"> here will be footer</h1>
+    <br>
+    </br>
